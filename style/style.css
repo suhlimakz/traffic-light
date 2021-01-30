@@ -71,7 +71,15 @@
   padding: 10px;
 }
 
-.text-light {
+.text-light-red {
+  display: none;
+}
+
+.text-light-yellow {
+  display: none;
+}
+
+.text-light-green {
   display: none;
 }
 
