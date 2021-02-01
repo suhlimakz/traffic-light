@@ -5,6 +5,10 @@ const textLightRed = document.querySelector( '.text-light-red' );
 const textLightYellow = document.querySelector( '.text-light-yellow' );
 const textLightGreen = document.querySelector( '.text-light-green' );
 const textAlert = document.querySelector( '.text-alert' );
+const yellowColorOff = '#ffdd99';
+const redColorOff = '#ff9999';
+const greenColorOff = '#99ff99';
+
 
 controllerLight();
 
@@ -21,7 +25,7 @@ lightYellow.addEventListener( 'click', ( e ) => {
   hideTextAlert();
   hideTextColor( textLightRed );
   hideTextColor( textLightGreen );
-  turnOnYellowLight(  );
+  turnOnYellowLight();
 })
 
 lightGreen.addEventListener( 'click', ( e ) => {
@@ -49,8 +53,8 @@ function turnOnYellowLight( ) {
     lightYellow.style.backgroundColor = yellowOn;
   }
 
-  lightRed.style.backgroundColor = '#ff9999';
-  lightGreen.style.backgroundColor = '#99ff99';
+  lightRed.style.backgroundColor = redColorOff;
+  lightGreen.style.backgroundColor = greenColorOff;
 }
 
 function turnOnGreenLight( ) {  
@@ -60,8 +64,8 @@ function turnOnGreenLight( ) {
     lightGreen.style.backgroundColor = greenOn;
   }
 
-  lightYellow.style.backgroundColor = '#ffdd99';
-  lightRed.style.backgroundColor = '#ff9999';
+  lightYellow.style.backgroundColor = yellowColorOff;
+  lightRed.style.backgroundColor = redColorOff;
 }
 
 function turnOnRedLight( ) {  
@@ -71,14 +75,14 @@ function turnOnRedLight( ) {
     lightRed.style.backgroundColor = redOn;
   }
 
-  lightYellow.style.backgroundColor = '#ffdd99';
-  lightGreen.style.backgroundColor = '#99ff99';
+  lightYellow.style.backgroundColor = yellowColorOff;
+  lightGreen.style.backgroundColor = greenColorOff;
 }
 
 function lightsOff() {
-  lightRed.style.backgroundColor = '#ff9999';
-  lightYellow.style.backgroundColor = '#ffdd99';
-  lightGreen.style.backgroundColor = '#99ff99';
+  lightRed.style.backgroundColor = redColorOff;
+  lightYellow.style.backgroundColor = yellowColorOff;
+  lightGreen.style.backgroundColor = greenColorOff;
 }
 
 function lightsOn() {
