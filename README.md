@@ -6,11 +6,15 @@ Que propunha a escrita de um código para controlar os semáforos da cidade. Par
 A função receberia uma string como argumento que representa o estado atual da luz e retorna uma string que representa o estado para qual a luz deve mudar.
 Por exemplo, update_light('green') deve retornar 'yellow'.  
 
+Após concluír a atividade proposta, me senti inspirada a fazer o front-end para essa atividade e esse foi o resultado dessa "brincadeira".
+
 ## **Status do projeto**
 :heavy_check_mark: Concluído :heavy_check_mark:
 
 ## **Demonstração**
-Você pode acessar uma versão dinâmica desse projeto no CodePen - [Clique aqui para ser redirecionado ao site](https://codepen.io/suhlimakz/project/editor/ZBmLvz  )
+Você pode acessar uma versão interativa desse projeto no CodePen - [Clique aqui para ser redirecionado ao site](https://codepen.io/suhlimakz/project/editor/ZBmLvz  )
+
+![giff](./.github/traffic-light.gif)
 
 ## **Tecnologias**
 As seguintes tecnologias foram usadas na construção desse projeto:
