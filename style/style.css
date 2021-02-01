@@ -12,6 +12,8 @@
 
   align-items: center;
   justify-content: center;
+
+  background-color: #3e5d79;
 }
 
 .traffic-light-area {
@@ -72,7 +74,7 @@
 
 .text-alert {
   display: none;
-  animation: fadeIn ease 5s;
+  animation: fadeIn ease 4s;
 }
 
 @keyframes fadeIn {
