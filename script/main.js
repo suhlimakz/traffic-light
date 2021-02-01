@@ -5,19 +5,16 @@ const textLightRed = document.querySelector( '.text-light-red' );
 const textLightYellow = document.querySelector( '.text-light-yellow' );
 const textLightGreen = document.querySelector( '.text-light-green' );
 
-lightRed.addEventListener( 'click', ( e ) => {
-  // console.log( e.target );
+controllerLight();
 
+lightRed.addEventListener( 'click', ( e ) => {
   showTextColor( textLightRed );
   hideTextColor( textLightYellow );
   hideTextColor( textLightGreen );
   turnOnRedLight();
-
 })
 
 lightYellow.addEventListener( 'click', ( e ) => {
-  // console.log( e.target );
-
   showTextColor( textLightYellow );
   hideTextColor( textLightRed );
   hideTextColor( textLightGreen );
@@ -25,8 +22,6 @@ lightYellow.addEventListener( 'click', ( e ) => {
 })
 
 lightGreen.addEventListener( 'click', ( e ) => {
-  // console.log( e.target );
-
   showTextColor( textLightGreen );
   hideTextColor( textLightRed );
   hideTextColor( textLightYellow );
@@ -76,3 +71,36 @@ function turnOnRedLight( ) {
   lightGreen.style.backgroundColor = '#99ff99';
 }
 
+function lightsOff() {
+  lightRed.style.backgroundColor = '#ff9999';
+  lightYellow.style.backgroundColor = '#ffdd99';
+  lightGreen.style.backgroundColor = '#99ff99';
+}
+
+function lightsOn() {
+  lightRed.style.backgroundColor = 'red';
+  lightYellow.style.backgroundColor = 'yellow';
+  lightGreen.style.backgroundColor = 'green';
+}
+
+function sleep( ms ) {
+  return new Promise( 
+    resolve => setTimeout( resolve, ms )
+   )
+}
+
+async function controllerLight() {
+  const ms = 2000;
+
+  lightsOn();
+  await sleep( ms );
+  lightsOff();
+  await sleep( ms );
+  turnOnRedLight();
+  await sleep( ms );
+  turnOnYellowLight();
+  await sleep( ms );
+  turnOnGreenLight();
+  await sleep( ms );
+  lightsOff();
+}
