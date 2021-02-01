@@ -11,9 +11,8 @@ lightRed.addEventListener( 'click', ( e ) => {
   showTextColor( textLightRed );
   hideTextColor( textLightYellow );
   hideTextColor( textLightGreen );
+  turnOnRedLight();
 
-  lightYellow.style.backgroundColor = '#ffdd99';
-  lightGreen.style.backgroundColor = '#99ff99';
 })
 
 lightYellow.addEventListener( 'click', ( e ) => {
@@ -22,9 +21,7 @@ lightYellow.addEventListener( 'click', ( e ) => {
   showTextColor( textLightYellow );
   hideTextColor( textLightRed );
   hideTextColor( textLightGreen );
-
-  lightRed.style.backgroundColor = '#ff9999';
-  lightGreen.style.backgroundColor = '#99ff99';
+  turnOnYellowLight(  );
 })
 
 lightGreen.addEventListener( 'click', ( e ) => {
@@ -33,9 +30,7 @@ lightGreen.addEventListener( 'click', ( e ) => {
   showTextColor( textLightGreen );
   hideTextColor( textLightRed );
   hideTextColor( textLightYellow );
-
-  lightYellow.style.backgroundColor = '#ffdd99';
-  lightRed.style.backgroundColor = '#ff9999';
+  turnOnGreenLight();
 })
 
 function hideTextColor( textLight ) {  
@@ -47,3 +42,37 @@ function hideTextColor( textLight ) {
 function showTextColor( textLight ) {
   textLight.style.display = 'block';
 }
+
+function turnOnYellowLight( ) {  
+  let  yellowOn = 'yellow';
+
+  if( lightYellow.style.backgroundColor !== yellowOn ) {
+    lightYellow.style.backgroundColor = yellowOn;
+  }
+
+  lightRed.style.backgroundColor = '#ff9999';
+  lightGreen.style.backgroundColor = '#99ff99';
+}
+
+function turnOnGreenLight( ) {  
+  let greenOn = 'green';
+
+  if( lightGreen.style.backgroundColor !== greenOn ) {
+    lightGreen.style.backgroundColor = greenOn;
+  }
+
+  lightYellow.style.backgroundColor = '#ffdd99';
+  lightRed.style.backgroundColor = '#ff9999';
+}
+
+function turnOnRedLight( ) {  
+  let redOn = 'red';
+
+  if( lightRed.style.backgroundColor !== redOn ) {
+    lightRed.style.backgroundColor = redOn;
+  }
+
+  lightYellow.style.backgroundColor = '#ffdd99';
+  lightGreen.style.backgroundColor = '#99ff99';
+}
+
