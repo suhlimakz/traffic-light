@@ -70,6 +70,27 @@
   padding: 10px;
 }
 
+.text-alert {
+  display: none;
+  animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+
+.title-alert {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  margin: 100px;
+}
+
+.info-alert {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
 .text-light-red {
   display: none;
 }

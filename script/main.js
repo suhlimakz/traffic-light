@@ -4,11 +4,13 @@ const lightGreen = document.querySelector( '.light-green' );
 const textLightRed = document.querySelector( '.text-light-red' );
 const textLightYellow = document.querySelector( '.text-light-yellow' );
 const textLightGreen = document.querySelector( '.text-light-green' );
+const textAlert = document.querySelector( '.text-alert' );
 
 controllerLight();
 
 lightRed.addEventListener( 'click', ( e ) => {
   showTextColor( textLightRed );
+  hideTextAlert();
   hideTextColor( textLightYellow );
   hideTextColor( textLightGreen );
   turnOnRedLight();
@@ -16,6 +18,7 @@ lightRed.addEventListener( 'click', ( e ) => {
 
 lightYellow.addEventListener( 'click', ( e ) => {
   showTextColor( textLightYellow );
+  hideTextAlert();
   hideTextColor( textLightRed );
   hideTextColor( textLightGreen );
   turnOnYellowLight(  );
@@ -23,6 +26,7 @@ lightYellow.addEventListener( 'click', ( e ) => {
 
 lightGreen.addEventListener( 'click', ( e ) => {
   showTextColor( textLightGreen );
+  hideTextAlert();
   hideTextColor( textLightRed );
   hideTextColor( textLightYellow );
   turnOnGreenLight();
@@ -83,6 +87,14 @@ function lightsOn() {
   lightGreen.style.backgroundColor = 'green';
 }
 
+function showTextAlert() {
+  textAlert.style.display = 'block';
+}
+
+function hideTextAlert() {
+  textAlert.style.display = 'none';
+}
+
 function sleep( ms ) {
   return new Promise( 
     resolve => setTimeout( resolve, ms )
@@ -103,4 +115,5 @@ async function controllerLight() {
   turnOnGreenLight();
   await sleep( ms );
   lightsOff();
+  showTextAlert();
 }
